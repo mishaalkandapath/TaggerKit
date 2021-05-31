@@ -208,7 +208,7 @@ class TKTagCell: UICollectionViewCell {
     
     func drawAddImagePath() -> UIBezierPath {
         //// Color Declarations
-        let color = UIColor.black
+        let color = UIColor.systemGray3
 
         //// Bezier 2 Drawing
         let bezier2Path = UIBezierPath()
