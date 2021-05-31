@@ -109,7 +109,7 @@ class TKTagCell: UICollectionViewCell {
 	// MARK: - Setup methods
 	
 	private func setupCell() {
-		clipsToBounds = true
+		//clipsToBounds = true
 		
 		addSubview(nameLabel)
 		addSubview(button)
