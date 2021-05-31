@@ -76,6 +76,7 @@ class TKTagCell: UICollectionViewCell {
             shadowLayer.shadowOpacity = 0.4
             shadowLayer.shadowRadius = 5.0
             layer.insertSublayer(shadowLayer, at: 0)
+		self.setNeedsLayout()
         }
     }
 	
