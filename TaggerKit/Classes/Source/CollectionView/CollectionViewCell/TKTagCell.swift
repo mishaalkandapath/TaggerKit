@@ -67,10 +67,15 @@ class TKTagCell: UICollectionViewCell {
     var shadowColor: UIColor? {
         didSet{
             guard let newColor = shadowColor else {return}
-            self.layer.shadowColor = newColor.cgColor
-            self.layer.shadowOffset = CGSize(width: 0, height: 2.0)
-            self.layer.shadowRadius = 5.0
-            self.layer.shadowOpacity = 0.5
+            let shadowLayer = CAShapeLayer()
+            shadowLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.cornerRadius ?? 0).cgPath
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.fillColor = backgroundColor?.cgColor
+            shadowLayer.shadowColor = newColor.cgColor
+            shadowLayer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+            shadowLayer.shadowOpacity = 0.4
+            shadowLayer.shadowRadius = 5.0
+            layer.insertSublayer(shadowLayer, at: 0)
         }
     }
 	
