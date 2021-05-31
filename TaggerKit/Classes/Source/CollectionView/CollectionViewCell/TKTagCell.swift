@@ -76,7 +76,7 @@ class TKTagCell: UICollectionViewCell {
 	
 	lazy var nameLabel: UILabel = {
 		let label 			= UILabel()
-		label.textColor 	= UIColor.darkGray
+		label.textColor 	= UIColor.secondaryLabel
 		label.textAlignment = .center
 		return label
 	}()
