@@ -64,6 +64,15 @@ class TKTagCell: UICollectionViewCell {
             self.layer.borderColor = newColor.cgColor
         }
     }
+    var shadowColor: UIColor? {
+        didSet{
+            guard let newColor = shadowColor else {return}
+            self.layer.shadowColor = newColor.cgColor
+            self.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+            self.layer.shadowRadius = 5.0
+            self.layer.shadowOpacity = 0.5
+        }
+    }
 	
 	lazy var nameLabel: UILabel = {
 		let label 			= UILabel()
