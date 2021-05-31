@@ -39,6 +39,7 @@ extension TKCollectionView: UICollectionViewDelegate {
         cell.borderSize     = customTagBorderWidth
         cell.borderColor    = customTagBorderColor
 		cell.delegate		= self
+		cell.shadowColor    = .gray
 	}
 }
 
